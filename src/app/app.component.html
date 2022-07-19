@@ -1,1 +1,5 @@
-<app-game-control></app-game-control>
+<app-game-control (gamePlaying)="onGamePlaying()"></app-game-control>
+<div *ngFor="let gamePlayedTime of gamePlayedTimes; let i = index">
+  <app-odd *ngIf="(i + 1) % 2 == 1"></app-odd>
+  <app-even *ngIf="(i + 1) % 2 == 0"></app-even>
+</div>

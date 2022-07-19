@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assessment-4-Angular';
+  gamePlayedTimes:string []=[];
+
+  onGamePlaying(){
+    this.gamePlayedTimes.push('GamePlayed')
+  }
+  // console.log("Head-GamePlayed")
 }

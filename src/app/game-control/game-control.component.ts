@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -6,17 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent implements OnInit {
+  @Output() gamePlaying=new EventEmitter<{data:string}>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  gameTheStart(){
-    // setInterval(,100)
-
+  startTheGame(){
+    console.log('Game started')
+   setInterval(()=>{this.gamePlaying.emit()},1000)
   }
-  gameTheStop(){
-
+  stopTheGame(){
+    console.log('Game stopped')
+    clearInterval()
   }
 
 }
