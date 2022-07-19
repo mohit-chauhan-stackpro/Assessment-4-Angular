@@ -11,5 +11,12 @@ export class GameControlComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  gameTheStart(){
+    // setInterval(,100)
+
+  }
+  gameTheStop(){
+
+  }
 
 }
